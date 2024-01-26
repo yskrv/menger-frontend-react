@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { COURSES_PAGE_ROUTE, FAQ_PAGE_ROUTE, LOGIN_PAGE_ROUTE, SUPPORT_PAGE_ROUTE } from "../utils/consts";
+import { COURSES_PAGE_ROUTE, FAQ_PAGE_ROUTE, HOME_PAGE_ROUTE, LOGIN_PAGE_ROUTE, SUPPORT_PAGE_ROUTE } from "../utils/consts";
 import NavbarButton from "./NavbarButton";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
@@ -7,9 +7,9 @@ import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 const Navbar: React.FC = () => {
     return (
         <header className="header">
-            <nav className="nav container">
+            <nav className="nav">
                 <div className="nav-part">
-                    <div className="nav-logo">Men'ger</div>
+                    <Link to={HOME_PAGE_ROUTE} className="nav-logo">Men'ger</Link>
                 </div>
                 <div className="nav-part">
                     <ul className="nav-link-list">
