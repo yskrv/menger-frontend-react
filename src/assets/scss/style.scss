@@ -1,0 +1,101 @@
+@import "./libs/reset";
+@import "./libs/mixins";
+@import "./libs/variables";
+
+body {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 20px 0;
+    border-bottom: 1px solid rgba($black, 0.2);
+}
+
+.nav {
+    @include flex();
+
+    &-logo {
+        font-family: "Acme", sans-serif;
+        @include text(36px, 48px, 400, $blue);
+    }
+
+    &-part {
+        &:last-child {
+            @include flex(flex-end, center);
+            gap: 32px;
+        }
+    }
+
+    &-btn {
+        padding: 12px 18px;
+        background: $blue;
+        border: 2px solid $blue;
+        border-radius: 12px;
+        @include flex();
+        gap: 14px;
+        @include text(18px, 18px, 500, $white);
+        transition: 0.2s ease;
+
+        svg {
+            color: $white;
+            width: 24px;
+        }
+
+        &:hover {
+            background: $white;
+            color: $blue;
+
+            svg {
+                color: $blue;
+            }
+        }
+
+        &__inverse {
+            padding: 12px 18px;
+            background: $white;
+            border: 2px solid $blue;
+            border-radius: 12px;
+            @include flex();
+            gap: 14px;
+            @include text(18px, 18px, 500, $blue);
+            transition: 0.2s ease;
+
+            svg {
+                color: $blue;
+                width: 24px;
+            }
+
+            &:hover {
+                background: $blue;
+                color: $white;
+
+                svg {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    &-link {
+        &-list {
+            @include flex();
+            gap: 36px;
+        }
+
+        &-item {
+            a {
+                @include text(18px, 24px, 400, $black);
+                transition: 0.2s ease;
+
+                &:hover {
+                    color: $blue;
+                }
+            }
+        }
+    }
+}
