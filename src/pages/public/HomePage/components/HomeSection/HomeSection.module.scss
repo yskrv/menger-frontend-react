@@ -1,0 +1,30 @@
+@import "../../../../../assets/scss/libs/variables";
+@import "../../../../../assets/scss/libs/mixins";
+
+.home {
+    @include flex();
+    gap: 40px;
+}
+
+.part {
+    &:first-child {
+        flex: 1;
+    }
+
+    &:last-child {
+        max-width: 480px;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.title {
+    font-family: "Nunito Sans", sans-serif;
+    @include text(48px, 56px, 900, $black);
+    margin-bottom: 20px;
+
+    span {
+        color: $green;
+    }
+}

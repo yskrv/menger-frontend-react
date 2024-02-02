@@ -1,6 +1,6 @@
-import faqImage from '../../assets/img/faq_image.png';
-import FaqItem from '../../components/FaqItem';
-import { FAQ } from '../../utils/interfaces';
+import FaqItem from './components/FaqItem';
+import { FAQ } from '../../../utils/interfaces';
+import faqImage from '../../../assets/img/faq_image.png';
 
 const faqQuestions: FAQ[] = [
     {

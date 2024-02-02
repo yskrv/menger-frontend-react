@@ -1,0 +1,39 @@
+@import "../../../../../assets/scss/libs/variables";
+@import "../../../../../assets/scss/libs/mixins";
+
+.forwhom {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 45px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 45px;
+}
+
+.item {
+  width: 100%;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  @include flex(center, center);
+
+  svg {
+    height: 28px;
+  }
+}
+
+.title {
+  max-width: 300px;
+  @include text(20px, 24px, 700, $black);
+  margin: 16px 0 12px;
+}
+
+.text {
+  @include text(16px, 24px, 600, $gray);
+}

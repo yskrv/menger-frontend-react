@@ -1,0 +1,31 @@
+@import "../../../../../assets/scss/libs/variables";
+@import "../../../../../assets/scss/libs/mixins";
+
+.wrapper {
+  padding: 64px;
+  margin-bottom: 100px;
+  display: grid;
+  @include flex();
+  gap: 64px;
+  background: rgba($light-green, 0.5);
+  border-radius: 60px;
+}
+
+.img {
+  width: 360px;
+
+  img {
+    width: 100%;
+  }
+}
+
+.info {
+  flex: 1;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px 44px;
+  margin: 24px 0;
+}
