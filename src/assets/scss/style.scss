@@ -3,115 +3,30 @@
 @import "./libs/variables";
 
 body {
-    font-family: "Ubuntu", sans-serif;
+    font-family: "Nunito", sans-serif;
 }
 
 .container {
     width: 1200px;
-    margin: 100px auto;
+    margin: 186px auto 0;
+}
+
+section {
+    padding-bottom: 100px;
 }
 
 .section {
     &-title {
-        @include text(36px, 48px, 700, $black);
-        margin-bottom: 16px;
+        @include text(40px, 44px, 800, $black);
+        margin-bottom: 20px;
     }
 
     &-text {
-        @include text(16px, 24px, 400, $gray);
+        @include text(18px, 28px, 400, $gray);
     }
 }
 
-.header {
-    padding: 20px 0;
-    border-bottom: 1px solid rgba($black, 0.2);
-}
 
-.nav {
-    @include flex();
-    width: 1200px;
-    margin: 0 auto;
-
-    &-logo {
-        font-family: "Acme", sans-serif;
-        @include text(36px, 48px, 400, $blue);
-    }
-
-    &-part {
-        &:last-child {
-            @include flex(flex-end, center);
-            gap: 32px;
-        }
-    }
-
-    &-btn {
-        padding: 12px 18px;
-        background: $blue;
-        border: 2px solid $blue;
-        border-radius: 12px;
-        @include flex();
-        gap: 14px;
-        @include text(18px, 18px, 500, $white);
-        transition: 0.2s ease;
-
-        svg {
-            color: $white;
-            width: 24px;
-        }
-
-        &:hover {
-            background: $white;
-            color: $blue;
-
-            svg {
-                color: $blue;
-            }
-        }
-
-        &__inverse {
-            padding: 12px 18px;
-            background: $white;
-            border: 2px solid $blue;
-            border-radius: 12px;
-            @include flex();
-            gap: 14px;
-            @include text(18px, 18px, 500, $blue);
-            transition: 0.2s ease;
-
-            svg {
-                color: $blue;
-                width: 24px;
-            }
-
-            &:hover {
-                background: $blue;
-                color: $white;
-
-                svg {
-                    color: $white;
-                }
-            }
-        }
-    }
-
-    &-link {
-        &-list {
-            @include flex();
-            gap: 36px;
-        }
-
-        &-item {
-            a {
-                @include text(18px, 24px, 400, $black);
-                transition: 0.2s ease;
-
-                &:hover {
-                    color: $blue;
-                }
-            }
-        }
-    }
-}
 
 .faq {
     @include flex(flex-start, flex-start);
@@ -136,7 +51,7 @@ body {
 
     &-item {
         padding: 20px 28px;
-        border: 1px solid $bg-blue;
+        border: 1px solid $border;
         border-radius: 20px;
         position: relative;
 
@@ -162,11 +77,11 @@ body {
 
             svg {
                 width: 20px;
-                color: $blue;
+                color: $green;
             }
 
             &:hover {
-                background: $blue;
+                background: $green;
                 cursor: pointer;
 
                 svg {
@@ -175,7 +90,7 @@ body {
             }
 
             &__active {
-                background: $blue;
+                background: $green;
 
                 svg {
                     color: $white;
@@ -184,46 +99,8 @@ body {
         }
 
         &__active {
-            background: $bg-blue;
+            background: rgba($light-green, 0.6);
         }
     }
 }
 
-.footer {
-    background: $blue;
-    padding: 56px 0 32px;
-
-    &-container {
-        width: 1200px;
-        margin: 0 auto; 
-    }
-
-    &-logo {
-        font-family: "Acme", sans-serif;
-        @include text(36px, 48px, 400, $white);
-        margin-bottom: 20px;
-    }
-
-    &-text {
-        @include text(16px, 24px, 300, $white);
-    }
-
-    &-link {
-        display: block;
-        margin-bottom: 16px;
-        @include text(20px, 32px, 700, $white);
-    }
-
-    &-header {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 40px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid $white;
-    }
-
-    &-bottom {
-        margin-top: 12px;
-        @include flex(flex-end, center);
-    }
-}

@@ -27,7 +27,7 @@ const faqQuestions: FAQ[] = [
 
 const FaqPage: React.FC = () => {
     return (
-        <div className="container faq">
+        <section className="container faq">
             <div className="faq-part">
                 <h2 className="section-title">Жиі қойылатын сұрақтарға жауаптар</h2>
                 <p className="section-text">Мұнда сіз біздің курстар туралы жиі кездесетін сұрақтарға жауап таба аласыз. Егер сізде қосымша сұрақтар туындаса, біздің қолдау қызметіне хабарласыңыз.</p>
@@ -36,7 +36,7 @@ const FaqPage: React.FC = () => {
             <div className="faq-part">{
                 faqQuestions.map(faq => (<FaqItem question={faq.question} answer={faq.answer}/>))
             }</div>
-        </div>
+        </section>
     )
 }
 

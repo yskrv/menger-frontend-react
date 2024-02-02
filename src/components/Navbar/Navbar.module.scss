@@ -1,0 +1,106 @@
+@import "../../assets/scss/libs/variables";
+@import "../../assets/scss/libs/mixins";
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  padding: 20px 0;
+  background: $white;
+  border-bottom: 1px solid rgba($black, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(60, 60, 60, 0.1);
+}
+
+.nav {
+  @include flex();
+  width: 1200px;
+  margin: 0 auto;
+  background: $white;
+
+  &-logo {
+    font-family: "Acme", sans-serif;
+    @include text(32px, 32px, 400, $green);
+  }
+
+  &-part {
+    &:first-child {
+      @include flex(flex-start, center);
+      gap: 100px;
+    }
+
+    &:last-child {
+      @include flex(flex-end, center);
+      gap: 24px;
+    }
+  }
+
+  &-btn {
+    padding: 12px 18px;
+    background: $green;
+    border: 2px solid $green;
+    border-radius: 10px;
+    @include flex();
+    gap: 8px;
+    @include text(16px, 16px, 500, $white);
+    transition: 0.2s ease;
+
+    svg {
+        color: $white;
+        height: 16px;
+    }
+
+    &:hover {
+        background: $white;
+        color: $green;
+
+        svg {
+            color: $green;
+        }
+    }
+
+    &__inverse {
+      padding: 12px 18px;
+      background: $white;
+      border: 2px solid $green;
+      border-radius: 12px;
+      @include flex();
+      gap: 14px;
+      @include text(18px, 18px, 500, $green);
+      transition: 0.2s ease;
+
+      svg {
+        color: $green;
+        width: 24px;
+      }
+
+      &:hover {
+        background: $green;
+        color: $white;
+
+        svg {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &-link {
+    &-list {
+      @include flex();
+      gap: 36px;
+    }
+
+    &-item {
+      a {
+        @include text(18px, 18px, 600, $black);
+        transition: 0.2s ease;
+
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+}
