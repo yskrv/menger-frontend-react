@@ -4,6 +4,7 @@ import NavbarButton from "./NavbarButton";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faRightToBracket } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Navbar.module.scss";
+import NavbarLink from "./NavbarLink";
 
 const Navbar: React.FC = () => {
     return (
@@ -12,9 +13,9 @@ const Navbar: React.FC = () => {
                 <div className={styles["nav-part"]}>
                     <Link to={HOME_PAGE_ROUTE} className={styles["nav-logo"]}>Men'ger</Link>
                     <ul className={styles["nav-link-list"]}>
-                        <li className={styles["nav-link-item"]}><Link to={COURSES_PAGE_ROUTE}>Курстар</Link></li>
-                        <li className={styles["nav-link-item"]}><Link to={FAQ_PAGE_ROUTE}>Сұрақ & Жауап</Link></li>
-                        <li className={styles["nav-link-item"]}><Link to={SUPPORT_PAGE_ROUTE}>Қолдау қызметі</Link></li>
+                        <NavbarLink link={COURSES_PAGE_ROUTE} title="Курстар"/>
+                        <NavbarLink link={FAQ_PAGE_ROUTE} title="Сұрақ & Жауап"/>
+                        <NavbarLink link={SUPPORT_PAGE_ROUTE} title="Қолдау қызметі"/>
                     </ul>
                 </div>
                 <div className={styles["nav-part"]}>
