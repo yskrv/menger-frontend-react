@@ -1,4 +1,4 @@
-import { AppRoute } from "./interfaces";
+import { AppRoute } from "./interfaces/general";
 import { COURSES_PAGE_ROUTE, FAQ_PAGE_ROUTE, HOME_PAGE_ROUTE, LOGIN_PAGE_ROUTE, REGISTER_PAGE_ROUTE, SUPPORT_PAGE_ROUTE } from "./consts";
 import FaqPage from "../pages/public/FaqPage";
 import HomePage from "../pages/public/HomePage";

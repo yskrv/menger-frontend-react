@@ -8,7 +8,8 @@
   left: 0;
   z-index: 10;
   padding: 20px 0;
-  background: $white;
+  background: rgba($white, 0.75);
+  backdrop-filter: blur(4px);
   border-bottom: 1px solid rgba($black, 0.2);
   box-shadow: 4px 4px 8px 0px rgba(60, 60, 60, 0.1);
 }
@@ -17,7 +18,6 @@
   @include flex();
   width: 1200px;
   margin: 0 auto;
-  background: $white;
 
   &-logo {
     font-family: "Acme", sans-serif;

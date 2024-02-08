@@ -2,7 +2,7 @@ import { faLeanpub } from "@fortawesome/free-brands-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
 import { faGraduationCap, faTengeSign, faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Course } from "../../../../../utils/interfaces";
+import { Course } from "../../../../../utils/interfaces/general";
 import styles from "./CoursesSection.module.scss";
 
 interface CoursesItemProps {
@@ -10,7 +10,6 @@ interface CoursesItemProps {
 }
 
 const CoursesItem: React.FC<CoursesItemProps> = ({ course }) => {
-  console.log(course.imageUrl);
   return (
     <div className={styles.course}>
       <div className={styles["course-rating"]}>

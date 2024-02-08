@@ -11,7 +11,18 @@
   transition: 0.2s ease;
 
   &:hover {
+    cursor: pointer;
     background: $white;
     color: $green;
+  }
+
+  &:disabled {
+    cursor: auto;
+    opacity: 0.7;
+
+    &:hover {
+      background: $green;
+      color: $white;
+    }
   }
 }

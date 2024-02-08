@@ -5,9 +5,9 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../../../../../components/Loader";
-import axiosInstance from "../../../../../services/axios";
+import axiosInstance from "../../../../../api/instance";
 import { COURSES_PAGE_ROUTE } from "../../../../../utils/consts";
-import { Course } from "../../../../../utils/interfaces";
+import { Course } from "../../../../../utils/interfaces/general";
 import CoursesItem from "./CoursesItem";
 import styles from "./CoursesSection.module.scss";
 
@@ -29,7 +29,7 @@ const CoursesSection: React.FC = () => {
         <Link className={styles.link} to={COURSES_PAGE_ROUTE}>Курстар тізімі <FontAwesomeIcon icon={faAngleRight}/></Link>
       </div>
       {
-        isLoading ? <Loader/> : <div className={styles.list}>{
+        isLoading ? <Loader isLarge={true}/> : <div className={styles.list}>{
           courses.map(course => (<CoursesItem course={course}/>))
         }</div>
       }

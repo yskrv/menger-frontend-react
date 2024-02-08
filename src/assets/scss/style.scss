@@ -8,11 +8,11 @@ body {
 
 .container {
     width: 1200px;
-    margin: 186px auto 0;
+    margin: 86px auto 0;
 }
 
 section {
-    padding-bottom: 100px;
+    padding-top: 100px;
 }
 
 .section {
@@ -27,80 +27,4 @@ section {
 }
 
 
-
-.faq {
-    @include flex(flex-start, flex-start);
-    gap: 60px;
-
-    &-part {
-        &:first-child {
-            width: 35%;
-        }
-
-        &:last-child {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
-    }
-
-    &-img {
-        width: 100%;
-    }
-
-    &-item {
-        padding: 20px 28px;
-        border: 1px solid $border;
-        border-radius: 20px;
-        position: relative;
-
-        &-question {
-            @include text(20px, 28px, 700, $black);
-            margin-right: 30px;
-        }
-
-        &-answer {
-            margin-top: 18px;
-            @include text(15px, 24px, 400, $gray);
-        }
-
-        &-btn {
-            position: absolute;
-            top: 20px;
-            right: 28px;
-            width: 30px;
-            height: 30px;
-            border-radius: 6px;
-            @include flex(center, center);
-            transition: 0.2s ease;
-
-            svg {
-                width: 20px;
-                color: $green;
-            }
-
-            &:hover {
-                background: $green;
-                cursor: pointer;
-
-                svg {
-                    color: $white;
-                }
-            }
-
-            &__active {
-                background: $green;
-
-                svg {
-                    color: $white;
-                }
-            }
-        }
-
-        &__active {
-            background: rgba($light-green, 0.6);
-        }
-    }
-}
 

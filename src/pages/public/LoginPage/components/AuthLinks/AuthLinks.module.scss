@@ -1,0 +1,26 @@
+@import "../../../../../assets/scss/libs/variables";
+@import "../../../../../assets/scss/libs/mixins";
+
+.list {
+  @include flex();
+}
+
+.item {
+  padding: 6px 18px;
+  border: 1px solid $green;
+  background: $white;
+  color: $green;
+  @include text(14px, 16px, 500, $green);
+  transition: 0.2s ease;
+
+  &:hover {
+    background: $green;
+    color: $white;
+  }
+
+  &__active {
+    cursor: auto;
+    background: $green;
+    color: $white;
+  }
+}
