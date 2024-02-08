@@ -1,0 +1,61 @@
+@import "../../assets/scss/libs/variables";
+@import "../../assets/scss/libs/mixins";
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($black, 0.4);
+  @include flex(center, center);
+}
+
+.wrapper {
+  max-width: 840px;
+  border: 6px solid $green;
+  border-radius: 40px;
+  background: $white;
+  box-shadow: 4px 4px 18px 0px rgba(255, 255, 255, 0.3);
+  padding: 36px 60px;
+}
+
+.header {
+  @include flex(flex-end, center);
+}
+
+.close {
+  font-weight: 900;
+  width: 24px;
+  height: 24px;
+  color: $green;
+  transition: 0.2s ease;
+
+  &:hover {
+    cursor: pointer;
+    color: rgba($green, 0.75);
+  }
+}
+
+.body {
+  @include flex();
+  gap: 40px;
+}
+
+.part {
+  width: 50%;
+}
+
+.image {
+  width: 100%;
+}
+
+.title {
+  @include text(28px, 36px, 800, $black);
+  margin-bottom: 4px;
+}
+
+.text {
+  @include text(18px, 24px, 500, $gray);
+}

@@ -1,3 +1,48 @@
 @import "../../../assets/scss/libs/variables";
 @import "../../../assets/scss/libs/mixins";
 
+.support {
+  padding: 100px 0;
+  @include flex();
+  gap: 60px;
+}
+
+.part {
+  &:first-child {
+    flex: 1;
+  }
+  &:last-child {
+    width: 320px;
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.title {
+  @include text(28px, 36px, 800, $black);
+  margin: 40px 0 12px;
+}
+
+.form {
+  margin-top: 36px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 40px;
+  margin-bottom: 24px;
+}
+
+.flex {
+  margin-top: 24px;
+  @include flex(flex-start, center);
+  gap: 20px;
+}
+
+.error {
+  margin-top: 16px;
+  @include text(16px, 16px, 700, $red);
+}

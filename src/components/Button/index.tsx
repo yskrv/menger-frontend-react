@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Loader from "../Loader";
 import styles from "./Button.module.scss";
 
 interface ButtonProps {
@@ -16,7 +15,7 @@ const Button: React.FC<ButtonProps> = ({ text, isLink = false, func, type = "but
   return (
     isLink ? 
       <Link style={{marginTop: `${marginTop}px`}} className={styles.button} to={link!}>{text}</Link> 
-      : <button type={type} className={styles.button} disabled={isLoading} onClick={func}>{text}</button>
+      : <button style={{marginTop: `${marginTop}px`}} type={type} className={styles.button} disabled={isLoading} onClick={func}>{text}</button>
   );
 }
 
