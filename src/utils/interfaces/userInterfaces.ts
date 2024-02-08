@@ -10,3 +10,8 @@ export interface User {
   isActivated: boolean;
   createdAt: Date;
 }
+
+export interface AuthResponse {
+  user: User,
+  token: string;
+}

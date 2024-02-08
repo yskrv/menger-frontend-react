@@ -1,0 +1,95 @@
+@import "../../../assets/scss/libs/variables";
+@import "../../../assets/scss/libs/mixins";
+
+.container {
+  padding: 186px 0 100px;
+  background: $bg-green;
+}
+
+.wrapper {
+  margin: 0 auto !important;
+  background: $white;
+  border: 1px solid $border;
+  aspect-ratio: 15 / 8;
+  box-shadow: 4px 4px 4px 0 rgba($black, 0.1);
+  @include flex();
+
+  &-part {
+    width: 50%;
+    overflow: hidden;
+
+    &:first-child {
+      position: relative;
+      height: 105%;
+      background: $light-green;
+    }
+
+    &:last-child {
+      padding: 48px;
+    }
+  }
+
+  &-header {
+    @include flex(space-between, flex-start);
+    margin-bottom: 36px;
+  }
+
+  &-bottom {
+    @include flex();
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  @include text(40px, 44px, 800, $black);
+}
+
+.link {
+  @include text(16px, 16px, 500, $gray);
+  transition: 0.2s ease;
+
+  &:hover {
+    color: rgba($gray, 0.8);
+  }
+}
+
+.circle {
+  position: absolute;
+  left: 50%;
+  bottom: 300px;
+  transform: translateX(-50%);
+  width: 1000px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: rgba($green, 0.4);
+  box-shadow: inset 4px 4px 10px 0 rgba($black, 0.1);
+
+  &:first-child {
+    top: 53.125%;
+    z-index: 3;
+  }
+
+  &:nth-child(2) {
+    top: 37.5%;
+    z-index: 2;
+  }
+
+  &:last-child {
+    top: 21.875%;
+    z-index: 1;
+  }
+}
+
+.error {
+  @include text(16px, 16px, 700, $red);
+}
+
+.loading {
+  @include flex(flex-start, center);
+  gap: 20px;
+}

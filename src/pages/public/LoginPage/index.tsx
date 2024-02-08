@@ -10,15 +10,25 @@ import AuthLinks from "./components/AuthLinks";
 import Button from "../../../components/Button";
 import Loader from "../../../components/Loader";
 import styles from "./LoginPage.module.scss";
+import { User } from "../../../utils/interfaces/userInterfaces";
+import { getMe } from "../../../api/user";
+import { setActiveUser } from "../../../redux/slices/user.slice";
+import { useAppDispatch } from "../../../hooks/reduxHooks";
 
 const LoginPage: React.FC = () => {
+	const dispatch = useAppDispatch();
+
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
 	const { mutate, isLoading, isError } = useMutation(login, {
-		onSuccess: (data) => {
+		onSuccess: async (data) => {
 			localStorage.setItem('token', data.token);
-			console.log(data.token);
+			const token = localStorage.getItem('token');
+    	if (token) {
+        const user: User = await getMe();
+        dispatch(setActiveUser({token, user}));
+      }
 		},
 		onError: (err) => {
 			console.error(err);
