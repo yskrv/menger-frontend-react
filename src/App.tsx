@@ -10,6 +10,7 @@ import { getMe } from "./api/user";
 import Loader from "./components/Loader";
 import axiosInstance from "./api/instance";
 import { useAuth } from "./hooks/useAuth";
+import Sidebar from "./components/Sidebar";
 
 const App = () => {
   const location = useLocation();
@@ -23,12 +24,12 @@ const App = () => {
     const setUser = async () => {
       if (token) {
         try {
-          const user: User = await axiosInstance.get("/users", {
+          const { data } = await axiosInstance.get("/users", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           });
-          dispatch(setActiveUser({ token, user }));
+          dispatch(setActiveUser({ token, data }));
         } catch (error) {
           console.error(error);
         }
@@ -48,7 +49,12 @@ const App = () => {
   }
 
   return isAuth ? (
-    <AppRouter />
+    <div className="app">
+      {isAuth && <Sidebar />}
+      <div className="content">
+        <AppRouter />
+      </div>
+    </div>
   ) : (
     <>
       <Navbar />

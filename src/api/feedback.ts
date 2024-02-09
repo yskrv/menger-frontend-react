@@ -11,3 +11,16 @@ export const addFeedback = async (dto: CreateFeedbackDto): Promise<Feedback> => 
     throw err;
   }
 }
+
+export const getAllFeedback = async (): Promise<Feedback[]> => {
+  try {
+    const { data } = await axiosInstance.get<Feedback[]>('/feedback', {
+      headers: {
+        'Authorization': localStorage.getItem('token')
+      }
+    });
+    return data;
+  } catch (err) {
+    throw err;
+  }
+}

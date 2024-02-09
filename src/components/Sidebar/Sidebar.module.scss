@@ -1,0 +1,60 @@
+@import "../../assets/scss/libs/variables";
+@import "../../assets/scss/libs/mixins";
+
+.sidebar {
+  width: 330px;
+  height: 100vh;
+  background-color: $white;
+  box-shadow: 2px 2px 12px 0px rgba($black, 0.2);
+  @include flex(space-between, flex-start);
+  flex-direction: column;
+}
+
+.logo {
+  font-family: "Acme", sans-serif;
+  @include text(32px, 32px, 400, $green);
+  margin-bottom: 100px;
+  padding: 32px 48px;
+}
+
+.logout {
+  margin-bottom: 48px;
+  p {
+    color: $red !important;
+  }
+
+  svg {
+    color: $red !important;
+  }
+
+  &:hover {
+    cursor: pointer;
+    svg, p {
+      color: $black !important;
+    }
+  }
+}
+
+.link {
+  background: none;
+  padding: 16px 48px;
+  @include flex(flex-start, center);
+  gap: 16px;
+
+  svg {
+    font-size: 20px;
+    color: $black;
+    transition: 0.2s ease;
+  }
+
+  p {
+    @include text(16px, 20px, 700, $black);
+    transition: 0.2s ease;
+  }
+
+  &:hover {
+    p, svg {
+      color: $green;
+    }
+  }
+}

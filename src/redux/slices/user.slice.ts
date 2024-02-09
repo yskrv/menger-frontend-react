@@ -18,9 +18,13 @@ export const userSlice = createSlice({
     setActiveUser(state, action) {
       state.token = action.payload.token;
       state.user = action.payload.user;
+    },
+    deleteActiveUser(state, _) {
+      state.token = "";
+      state.user = null;
     }
   }
 });
 
-export const { setActiveUser } = userSlice.actions;
+export const { setActiveUser, deleteActiveUser } = userSlice.actions;
 export default userSlice.reducer;
