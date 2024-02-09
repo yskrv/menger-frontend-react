@@ -8,9 +8,8 @@ import Loader from "../../../components/Loader";
 import Modal from "../../../components/Modal";
 import supportImage from "../../../assets/img/support_image.png";
 import modalSupportImage from "../../../assets/img/modal_support_image.png";
-import styles from "./SupportPage.module.scss";
 import { Feedback } from "../../../utils/interfaces/feedbackInterfaces";
-
+import styles from "./SupportPage.module.scss";
 
 const SupportPage: React.FC = () => {
   const [fullName, setFullName] = useState<string>("");
@@ -29,31 +28,39 @@ const SupportPage: React.FC = () => {
     },
     onError: (err) => {
       console.log(err);
-    }
+    },
   });
 
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
     mutate({ fullName, email, message });
-  }
+  };
 
   return (
     <>
-      {
-        isOpen && <Modal
+      {isOpen && (
+        <Modal
           imageUrl={modalSupportImage}
           title="Сіздің сұрағыңыз сәтті жеткізілді"
           text={`Біздің қолдау қызметіне сұрақ жазғаныңызға рахмет! Сіздің сұрағыңыз #${feedback?.id} нөмерімен тіркелген. Біздің маманымыз сізбен жақын арада хабарласады.`}
           setIsOpen={setIsOpen}
         />
-      }
+      )}
       <div className="container">
         <div className={styles.support}>
           <div className={styles.part}>
-            <h2 className="section-title"><span>Men'ger</span> Қолдау Қызметі</h2>
-            <p className="section-text">Біз сізге қызметтерімізді пайдалану кезінде кез келген сұрақтарыңызға немесе мәселелеріңізге көмектесуге әрқашан дайынбыз.</p>
+            <h2 className="section-title">
+              <span>Men'ger</span> Қолдау Қызметі
+            </h2>
+            <p className="section-text">
+              Біз сізге қызметтерімізді пайдалану кезінде кез келген
+              сұрақтарыңызға немесе мәселелеріңізге көмектесуге әрқашан
+              дайынбыз.
+            </p>
             <h3 className={styles.title}>Қолдау қызметіне жазу</h3>
-            <p className="section-text">Өтініш қалдырыңыз, және біз сізге көмектесуге тырысамыз:</p>
+            <p className="section-text">
+              Өтініш қалдырыңыз, және біз сізге көмектесуге тырысамыз:
+            </p>
             <form className={styles.form} onSubmit={handleSubmit}>
               <div className={styles.grid}>
                 <Input
@@ -87,9 +94,13 @@ const SupportPage: React.FC = () => {
                   marginTop={0}
                   isLoading={isLoading}
                 />
-                { isLoading && <Loader/> }
+                {isLoading && <Loader />}
               </div>
-              { isError && <p className={styles.error}>Хабарлама жіберу кезінде қате пайда болды</p> }
+              {isError && (
+                <p className={styles.error}>
+                  Хабарлама жіберу кезінде қате пайда болды
+                </p>
+              )}
             </form>
           </div>
           <div className={styles.part}>
@@ -98,7 +109,7 @@ const SupportPage: React.FC = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default SupportPage;

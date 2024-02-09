@@ -5,15 +5,15 @@ import HomeSection from "./components/HomeSection";
 import PricingSection from "./components/PricingSection";
 
 const HomePage: React.FC = () => {
-    return (
-        <div className="container">
-            <HomeSection/>
-            <CoursesSection/>
-            <ForWhomSection/>
-            <PricingSection/>
-            <FormSection/>
-        </div>
-    )
-}
+  return (
+    <div className="container">
+      <HomeSection />
+      <CoursesSection />
+      <ForWhomSection />
+      <PricingSection />
+      <FormSection />
+    </div>
+  );
+};
 
 export default HomePage;

@@ -1,0 +1,47 @@
+@import "../../../assets/scss/libs/variables";
+@import "../../../assets/scss/libs/mixins";
+
+.courses {
+  padding: 100px 0;
+}
+
+.wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 2fr 320px;
+  grid-gap: 45px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 45px;
+}
+
+.title {
+  @include text(20px, 28px, 700, $black);
+  margin-bottom: 16px;
+}
+
+.price {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 32px;
+}
+
+.checkbox {
+  @include flex(flex-start, center);
+  gap: 12px;
+  margin-bottom: 12px;
+
+  input {
+    width: 20px;
+    height: 20px;
+    accent-color: $green;
+  }
+
+  p {
+    @include text(16px, 16px, 400, $black);
+  }
+}

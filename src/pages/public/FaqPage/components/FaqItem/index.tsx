@@ -1,8 +1,8 @@
 import { useState } from "react";
+import classNames from "classnames";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import styles from "./FaqItem.module.scss";
-import classNames from "classnames";
 
 interface FaqItemProps {
   question: string;

@@ -8,7 +8,7 @@ import Loader from "../../../../../components/Loader";
 import axiosInstance from "../../../../../api/instance";
 import { COURSES_PAGE_ROUTE } from "../../../../../utils/consts";
 import { Course } from "../../../../../utils/interfaces/general";
-import CoursesItem from "./CoursesItem";
+import CoursesItem from "../../../../../components/CoursesItem";
 import styles from "./CoursesSection.module.scss";
 
 const CoursesSection: React.FC = () => {
@@ -16,25 +16,34 @@ const CoursesSection: React.FC = () => {
   const [courses, setCourses] = useState<Course[]>([]);
 
   useEffect(() => {
-    axiosInstance.get('/courses')
-      .then(res => setCourses(res.data))
-      .catch(err => console.log(err))
+    axiosInstance
+      .get("/courses")
+      .then((res) => setCourses(res.data))
+      .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));
   }, []);
 
   return (
     <section>
       <div className={styles.header}>
-        <h2 className={classNames("section-title", styles.title)}>Ағылшын тілін үйренуге арналған курстар тізімі</h2>
-        <Link className={styles.link} to={COURSES_PAGE_ROUTE}>Курстар тізімі <FontAwesomeIcon icon={faAngleRight}/></Link>
+        <h2 className={classNames("section-title", styles.title)}>
+          Ағылшын тілін үйренуге арналған курстар тізімі
+        </h2>
+        <Link className={styles.link} to={COURSES_PAGE_ROUTE}>
+          Курстар тізімі <FontAwesomeIcon icon={faAngleRight} />
+        </Link>
       </div>
-      {
-        isLoading ? <Loader isLarge={true}/> : <div className={styles.list}>{
-          courses.map(course => (<CoursesItem course={course}/>))
-        }</div>
-      }
+      {isLoading ? (
+        <Loader isLarge={true} />
+      ) : (
+        <div className={styles.list}>
+          {courses.map((course) => (
+            <CoursesItem course={course} />
+          ))}
+        </div>
+      )}
     </section>
   );
-}
+};
 
 export default CoursesSection;
