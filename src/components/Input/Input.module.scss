@@ -25,6 +25,11 @@
   &::placeholder {
     @include text(14px, 18px, 300, $border);
   }
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
 }
 
 .icon {

@@ -1,0 +1,50 @@
+@import "../../../assets/scss/libs/variables";
+@import "../../../assets/scss/libs/mixins";
+
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 45px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.upload {
+  margin: 12px 0 24px;
+  padding: 12px 0;
+  @include flex(center, center);
+  gap: 16px;
+  background: $green;
+  transition: 0.3s ease;
+  svg {
+    color:$white;
+    font-size: 24px;
+  }
+  h6{
+    @include text(18px, 24px, 400, white);
+  }
+  &:hover{
+    background: rgba($green, 0.8);
+  }
+}
+
+.preview {
+  width: 100%;
+}
+
+.title {
+  @include text(14px, 18px, 700, $black);
+}
+
+.btn {
+  @include flex(flex-start, center);
+  gap: 12px;
+}
+
+.message {
+  @include text(16px, 16px, 500, $black);
+}

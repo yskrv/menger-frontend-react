@@ -2,10 +2,12 @@ import {
   faArrowRightFromBracket,
   faCircleQuestion,
   faHouse,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import {
   DASHBOARD_COURSES_PAGE_ROUTE,
   DASHBOARD_MAIN_PAGE_ROUTE,
+  DASHBOARD_PROFILE_PAGE_ROUTE,
   DASHBOARD_SUPPORT_PAGE_ROUTE,
 } from "../../utils/consts";
 import { faLeanpub } from "@fortawesome/free-brands-svg-icons";
@@ -35,6 +37,11 @@ const Sidebar: React.FC = () => {
           link={DASHBOARD_MAIN_PAGE_ROUTE}
           text="Бастысы"
           icon={faHouse}
+        />
+        <SidebarLink
+          link={DASHBOARD_PROFILE_PAGE_ROUTE}
+          text="Менің аккаунтым"
+          icon={faUser}
         />
         <SidebarLink
           link={DASHBOARD_COURSES_PAGE_ROUTE}

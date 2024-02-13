@@ -1,4 +1,9 @@
-import { faEarthAmericas, faFlask, faLightbulb, faUserDoctor } from "@fortawesome/free-solid-svg-icons";
+import {
+  faEarthAmericas,
+  faFlask,
+  faLightbulb,
+  faUserDoctor,
+} from "@fortawesome/free-solid-svg-icons";
 import ForWhomItem from "./ForWhomItem";
 import styles from "./ForWhomSection.module.scss";
 
@@ -6,8 +11,16 @@ const ForWhomSection: React.FC = () => {
   return (
     <section className={styles.forwhom}>
       <div>
-        <h2 className="section-title">Men’ger кімге<br/>келеді?</h2>
-        <p className="section-text">Біздің курстар кәсіби ағылшын тілін үйренуге ұмтылатын көптеген адамдар үшін ажырамас әдістеме. Біздің курстар әсіресе кімге пайдалы болуы мүмкін?</p>
+        <h2 className="section-title">
+          Men'ger кімге
+          <br />
+          келеді?
+        </h2>
+        <p className="section-text">
+          Біздің курстар кәсіби ағылшын тілін үйренуге ұмтылатын көптеген
+          адамдар үшін ажырамас әдістеме. Біздің курстар әсіресе кімге пайдалы
+          болуы мүмкін?
+        </p>
       </div>
       <div className={styles.grid}>
         <ForWhomItem
@@ -41,6 +54,6 @@ const ForWhomSection: React.FC = () => {
       </div>
     </section>
   );
-}
+};
 
 export default ForWhomSection;

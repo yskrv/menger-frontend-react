@@ -1,0 +1,6 @@
+@import "../../../assets/scss/libs/variables";
+@import "../../../assets/scss/libs/mixins";
+
+.header {
+  @include flex();
+}

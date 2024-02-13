@@ -19,14 +19,29 @@ export interface Course {
 }
 
 export interface Application {
+	id: number;
 	fullName: string;
 	organization: string;
 	email: string;
 	phoneNumber: string;
-	date: string;
+	text: string;
+	isAccepted: boolean;
+	createdAt: Date;
 }
 
 export interface AuthLink {
 	link: string;
 	name: string;
+}
+
+export interface HeaderRoute {
+	name: string;
+	component: React.ComponentType<any>;
+	props?: any;
+}
+
+export interface Organization {
+	id: number;
+	name: string;
+	createdAt: Date;
 }

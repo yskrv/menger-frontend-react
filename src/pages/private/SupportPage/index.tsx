@@ -1,4 +1,9 @@
-import { faAt, faComment, faHashtag, faUser } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAt,
+  faComment,
+  faHashtag,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Loader from "../../../components/Loader";
 import { useFeedback } from "../../../hooks/useFeedback";
@@ -17,23 +22,26 @@ const SupportPage: React.FC = () => {
         ) : (
           data?.map((feedback) => (
             <div className={styles.item}>
-              <div className={styles.number}><FontAwesomeIcon icon={faHashtag}/>{feedback.id}</div>
+              <div className={styles.number}>
+                <FontAwesomeIcon icon={faHashtag} />
+                {feedback.id}
+              </div>
               <div>
                 <div className={styles.block}>
-                  <FontAwesomeIcon icon={faUser}/>
+                  <FontAwesomeIcon icon={faUser} />
                   <p>{feedback.fullName}</p>
                 </div>
                 <div className={styles.block}>
-                  <FontAwesomeIcon icon={faAt}/>
+                  <FontAwesomeIcon icon={faAt} />
                   <p>{feedback.email}</p>
                 </div>
                 <div className={styles.block}>
-                  <FontAwesomeIcon icon={faComment}/>
+                  <FontAwesomeIcon icon={faComment} />
                   <p>{feedback.message}</p>
                 </div>
               </div>
             </div>
-            ))
+          ))
         )}
       </div>
     </div>

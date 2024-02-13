@@ -5,8 +5,6 @@ import AppRouter from "./components/AppRouter";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import { setActiveUser } from "./redux/slices/user.slice";
-import { User } from "./utils/interfaces/userInterfaces";
-import { getMe } from "./api/user";
 import Loader from "./components/Loader";
 import axiosInstance from "./api/instance";
 import { useAuth } from "./hooks/useAuth";
@@ -29,7 +27,7 @@ const App = () => {
               Authorization: `Bearer ${token}`,
             },
           });
-          dispatch(setActiveUser({ token, data }));
+          dispatch(setActiveUser({ token, user: data }));
         } catch (error) {
           console.error(error);
         }
@@ -45,7 +43,11 @@ const App = () => {
   }, [location.pathname, location.hash]);
 
   if (isLoading) {
-    return <Loader />;
+    return (
+      <div className="loader-container">
+        <Loader isLarge={true} />
+      </div>
+    );
   }
 
   return isAuth ? (

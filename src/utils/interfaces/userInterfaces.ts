@@ -1,3 +1,5 @@
+import { Organization } from "./general";
+
 export interface User {
   id: number;
   firstName: string;
@@ -9,6 +11,8 @@ export interface User {
   points: number;
   isActivated: boolean;
   createdAt: Date;
+  organizationId: number;
+  organization: Organization;
 }
 
 export interface AuthResponse {
