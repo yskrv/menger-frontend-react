@@ -2,13 +2,17 @@ import {
   faArrowRightFromBracket,
   faCircleQuestion,
   faHouse,
+  faListCheck,
   faUser,
+  faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import {
+  DASHBOARD_APPLICATIONS_PAGE_ROUTE,
   DASHBOARD_COURSES_PAGE_ROUTE,
   DASHBOARD_MAIN_PAGE_ROUTE,
   DASHBOARD_PROFILE_PAGE_ROUTE,
   DASHBOARD_SUPPORT_PAGE_ROUTE,
+  DASHBOARD_USERS_PAGE_ROUTE,
 } from "../../utils/consts";
 import { faLeanpub } from "@fortawesome/free-brands-svg-icons";
 import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
@@ -53,6 +57,25 @@ const Sidebar: React.FC = () => {
             link={DASHBOARD_SUPPORT_PAGE_ROUTE}
             text="Сұрақтар"
             icon={faCircleQuestion}
+          />
+        )}
+        {user?.type === "admin" && (
+          <SidebarLink
+            link={DASHBOARD_APPLICATIONS_PAGE_ROUTE}
+            text="Өтініштер"
+            icon={faListCheck}
+          />
+        )}
+        {user?.type === "manager" && (
+          <SidebarLink
+            link={
+              DASHBOARD_USERS_PAGE_ROUTE.substring(
+                0,
+                DASHBOARD_USERS_PAGE_ROUTE.length - 3
+              ) + user.organizationId
+            }
+            text="Пайдаланушылар"
+            icon={faUsers}
           />
         )}
       </div>

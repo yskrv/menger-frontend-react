@@ -1,0 +1,39 @@
+@import "../../../../../assets/scss/libs/variables";
+@import "../../../../../assets/scss/libs/mixins";
+
+.flex {
+  margin-top: 40px;
+  @include flex(flex-start, center);
+  gap: 80px;
+}
+
+.item {
+  position: relative;
+  @include text(22px, 32px, 500, $black);
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    height: 4px;
+    width: 0px;
+    background: $black;
+    border-radius: 4px;
+    transition: 0.3s ease;
+  }
+
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  &__active {
+    &::after {
+      width: 100%;
+      background: $green;
+    }
+  }
+}

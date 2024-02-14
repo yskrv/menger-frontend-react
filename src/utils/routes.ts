@@ -1,5 +1,5 @@
 import { AppRoute } from "./interfaces/general";
-import { COURSES_PAGE_ROUTE, COURSE_PAGE_ROUTE, DASHBOARD_COURSES_PAGE_ROUTE, DASHBOARD_MAIN_PAGE_ROUTE, DASHBOARD_SUPPORT_PAGE_ROUTE, FAQ_PAGE_ROUTE, HOME_PAGE_ROUTE, LOGIN_PAGE_ROUTE, REGISTER_PAGE_ROUTE, SUPPORT_PAGE_ROUTE, DASHBOARD_CREATE_COURSE_PAGE_ROUTE, DASHBOARD_PROFILE_PAGE_ROUTE, DASHBOARD_APPLICATIONS_PAGE_ROUTE } from "./consts";
+import { COURSES_PAGE_ROUTE, COURSE_PAGE_ROUTE, DASHBOARD_COURSES_PAGE_ROUTE, DASHBOARD_MAIN_PAGE_ROUTE, DASHBOARD_SUPPORT_PAGE_ROUTE, FAQ_PAGE_ROUTE, HOME_PAGE_ROUTE, LOGIN_PAGE_ROUTE, REGISTER_PAGE_ROUTE, SUPPORT_PAGE_ROUTE, DASHBOARD_CREATE_COURSE_PAGE_ROUTE, DASHBOARD_PROFILE_PAGE_ROUTE, DASHBOARD_APPLICATIONS_PAGE_ROUTE, DASHBOARD_USERS_PAGE_ROUTE } from "./consts";
 import FaqPage from "../pages/public/FaqPage";
 import HomePage from "../pages/public/HomePage";
 import SupportPage from "../pages/public/SupportPage";
@@ -13,6 +13,7 @@ import CoursePage from "../pages/public/CoursePage";
 import CreateCoursePage from "../pages/private/CreateCoursePage";
 import ProfilePage from "../pages/private/ProfilePage";
 import ApplicationsPage from "../pages/private/ApplicationsPage";
+import UsersPage from "../pages/private/UsersPage";
 
 export const publicRoutes: AppRoute[] = [
   {
@@ -69,5 +70,9 @@ export const privateRoutes: AppRoute[] = [
   {
     path: DASHBOARD_APPLICATIONS_PAGE_ROUTE,
     element: ApplicationsPage
+  },
+  {
+    path: DASHBOARD_USERS_PAGE_ROUTE,
+    element: UsersPage
   }
 ];

@@ -18,7 +18,7 @@ const SupportPage: React.FC = () => {
       <h1 className="section-title">Сұрақтар</h1>
       <div className={isLoading ? "" : styles.grid}>
         {isLoading ? (
-          <Loader />
+          <Loader isLarge={true} />
         ) : (
           data?.map((feedback) => (
             <div className={styles.item}>

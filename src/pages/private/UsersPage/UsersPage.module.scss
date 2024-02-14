@@ -1,0 +1,44 @@
+@import "../../../assets/scss/libs/variables";
+@import "../../../assets/scss/libs/mixins";
+
+.container {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  grid-gap: 45px;
+  margin-top: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.flex {
+  @include flex(flex-start, center);
+  gap: 12px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  padding: 12px 24px;
+  @include flex(flex-start, center);
+  border: 1px solid $border;
+}
+
+.number {
+  padding-right: 16px;
+  @include text(16px, 24px, 600, $black);
+}
+
+.name {
+  width: 240px;
+  padding: 0 16px;
+  border-left: 1px solid $border;
+  @include text(16px, 24px, 600, $black);
+}

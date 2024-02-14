@@ -17,7 +17,7 @@ const CoursesSection: React.FC = () => {
 
   useEffect(() => {
     axiosInstance
-      .get("/courses")
+      .get("/courses/popular")
       .then((res) => setCourses(res.data))
       .catch((err) => console.log(err))
       .finally(() => setIsLoading(false));

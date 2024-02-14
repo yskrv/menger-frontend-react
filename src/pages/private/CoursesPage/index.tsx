@@ -64,11 +64,12 @@ const CoursesPage: React.FC = () => {
           />
         )}
       </div>
-      {user?.type === "admin" && isLoading ? (
-        <Loader isLarge={true} />
-      ) : (
-        <CoursesHeader routes={adminRoutes} />
-      )}
+      {user?.type === "admin" &&
+        (isLoading ? (
+          <Loader isLarge={true} />
+        ) : (
+          <CoursesHeader routes={adminRoutes} />
+        ))}
     </div>
   );
 };

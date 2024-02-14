@@ -1,0 +1,9 @@
+@import "../../../assets/scss/libs/variables";
+@import "../../../assets/scss/libs/mixins";
+
+.grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 45px;
+}

@@ -12,5 +12,7 @@ export const DASHBOARD_CREATE_COURSE_PAGE_ROUTE: string = '/dashboard/courses/cr
 export const DASHBOARD_SUPPORT_PAGE_ROUTE: string = '/dashboard/support';
 export const DASHBOARD_PROFILE_PAGE_ROUTE: string = '/dashboard/profile';
 export const DASHBOARD_APPLICATIONS_PAGE_ROUTE: string = '/dashboard/applications';
+export const DASHBOARD_USERS_PAGE_ROUTE: string = '/dashboard/users/:id';
+
 
 export const NUMBER_REGEXP: RegExp = /^\d+$/;

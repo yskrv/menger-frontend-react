@@ -14,7 +14,7 @@ const App = () => {
   const location = useLocation();
   const dispatch = useAppDispatch();
   const isAuth = useAuth();
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     setIsLoading(true);
