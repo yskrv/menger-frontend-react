@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <div>
-            <div className={styles.logo}>Men'ger</div>
+            <div className={styles.logo}>Xplore</div>
             <p className={styles.text}>
               Халықаралық жетістік тілін
               <br />
@@ -44,7 +44,7 @@ const Footer: React.FC = () => {
       </div>
       <div className={styles.bottom}>
         <div className={styles["bottom-container"]}>
-          <p className={styles["bottom-text"]}>2024 &copy; Men'ger</p>
+          <p className={styles["bottom-text"]}>2024 &copy; Xplore</p>
           <p className={styles["bottom-text"]}>Барлық құқықтар қорғалған</p>
         </div>
       </div>

@@ -36,7 +36,7 @@ const Sidebar: React.FC = () => {
   return (
     <div className={styles.sidebar}>
       <div>
-        <h1 className={styles.logo}>Men'ger</h1>
+        <h1 className={styles.logo}>Xplore</h1>
         <SidebarLink
           link={DASHBOARD_MAIN_PAGE_ROUTE}
           text="Бастысы"

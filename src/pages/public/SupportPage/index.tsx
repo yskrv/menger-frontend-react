@@ -50,7 +50,7 @@ const SupportPage: React.FC = () => {
         <div className={styles.support}>
           <div className={styles.part}>
             <h2 className="section-title">
-              <span>Men'ger</span> Қолдау Қызметі
+              <span>Xplore</span> Қолдау Қызметі
             </h2>
             <p className="section-text">
               Біз сізге қызметтерімізді пайдалану кезінде кез келген

@@ -12,7 +12,7 @@ const ForWhomSection: React.FC = () => {
     <section className={styles.forwhom}>
       <div>
         <h2 className="section-title">
-          Men'ger кімге
+          Xplore кімге
           <br />
           келеді?
         </h2>

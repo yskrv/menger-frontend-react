@@ -18,7 +18,7 @@ const Navbar: React.FC = () => {
       <nav className={styles.nav}>
         <div className={styles["nav-part"]}>
           <Link to={HOME_PAGE_ROUTE} className={styles["nav-logo"]}>
-            Men'ger
+            Xplore
           </Link>
           <ul className={styles["nav-link-list"]}>
             <NavbarLink link={COURSES_PAGE_ROUTE} title="Курстар" />

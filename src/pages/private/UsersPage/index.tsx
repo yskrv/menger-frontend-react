@@ -94,7 +94,11 @@ const UsersPage: React.FC = () => {
           ) : (
             <div className={styles.list}>
               {users
-                .filter((user) => user.organizationId === organizationId)
+                .filter(
+                  (user) =>
+                    user.organizationId === organizationId &&
+                    user.type === "student"
+                )
                 .map((user, index) => (
                   <div className={styles.item}>
                     <div className={styles.number}>{index + 1}</div>
